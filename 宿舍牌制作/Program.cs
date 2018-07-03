@@ -17,7 +17,7 @@ namespace 宿舍牌制作
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new 主窗口());
+            Application.Run(new MainForm());
         }
     }
 }

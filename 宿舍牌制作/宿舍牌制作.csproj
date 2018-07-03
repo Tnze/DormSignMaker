@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{32F2EFAE-AC17-4EA5-93E5-5776CA0C0BE8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>宿舍牌制作</RootNamespace>
     <AssemblyName>宿舍牌制作</AssemblyName>
@@ -54,9 +54,11 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Denius.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,28 +72,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="主窗口.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="主窗口.Designer.cs">
-      <DependentUpon>主窗口.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="批量工具.cs">
+    <Compile Include="ScriptEditer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="批量工具.Designer.cs">
-      <DependentUpon>批量工具.cs</DependentUpon>
+    <Compile Include="ScriptEditer.Designer.cs">
+      <DependentUpon>ScriptEditer.cs</DependentUpon>
     </Compile>
-    <Compile Include="模板生成器.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="模板生成器.Designer.cs">
-      <DependentUpon>模板生成器.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="主窗口.resx">
-      <DependentUpon>主窗口.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,13 +99,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="批量工具.resx">
-      <DependentUpon>批量工具.cs</DependentUpon>
+    <EmbeddedResource Include="ScriptEditer.resx">
+      <DependentUpon>ScriptEditer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="模板生成器.resx">
-      <DependentUpon>模板生成器.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Denius.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,18 +116,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
@@ -146,6 +126,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
