@@ -38,6 +38,7 @@
             this.背景ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.输出文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.脚本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.字体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.输出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.outputPicture = new System.Windows.Forms.SaveFileDialog();
-            this.字体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -128,14 +128,14 @@
             // 背景ToolStripMenuItem
             // 
             this.背景ToolStripMenuItem.Name = "背景ToolStripMenuItem";
-            this.背景ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.背景ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.背景ToolStripMenuItem.Text = "背景图片";
             this.背景ToolStripMenuItem.Click += new System.EventHandler(this.背景ToolStripMenuItem_Click);
             // 
             // 输出文件夹ToolStripMenuItem
             // 
             this.输出文件夹ToolStripMenuItem.Name = "输出文件夹ToolStripMenuItem";
-            this.输出文件夹ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.输出文件夹ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.输出文件夹ToolStripMenuItem.Text = "输出文件夹";
             this.输出文件夹ToolStripMenuItem.Click += new System.EventHandler(this.输出文件夹ToolStripMenuItem_Click);
             // 
@@ -143,9 +143,16 @@
             // 
             this.脚本ToolStripMenuItem.Name = "脚本ToolStripMenuItem";
             this.脚本ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.脚本ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.脚本ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.脚本ToolStripMenuItem.Text = "脚本";
             this.脚本ToolStripMenuItem.Click += new System.EventHandler(this.脚本ToolStripMenuItem_Click);
+            // 
+            // 字体ToolStripMenuItem
+            // 
+            this.字体ToolStripMenuItem.Name = "字体ToolStripMenuItem";
+            this.字体ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.字体ToolStripMenuItem.Text = "字体";
+            this.字体ToolStripMenuItem.Click += new System.EventHandler(this.字体ToolStripMenuItem_Click);
             // 
             // 操作ToolStripMenuItem
             // 
@@ -222,6 +229,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox1.Location = new System.Drawing.Point(0, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(676, 350);
@@ -253,13 +261,6 @@
             // outputPicture
             // 
             this.outputPicture.Filter = "位图文件|*.bmp|PNG文件|*.png|GIF文件|*.gif|JPEG文件|*.jpeg";
-            // 
-            // 字体ToolStripMenuItem
-            // 
-            this.字体ToolStripMenuItem.Name = "字体ToolStripMenuItem";
-            this.字体ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.字体ToolStripMenuItem.Text = "字体";
-            this.字体ToolStripMenuItem.Click += new System.EventHandler(this.字体ToolStripMenuItem_Click);
             // 
             // fontDialog1
             // 
