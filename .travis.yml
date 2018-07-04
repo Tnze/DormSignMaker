@@ -1,2 +1,9 @@
 language: csharp
 solution: 宿舍牌制作.sln
+deploy:
+  provider: releases
+  api_key: "dfe0a7486b3cf468ea0911a63e3c8cbfae78e311"
+  file: "/home/travis/build/GeniusJunDao/DormSignMaker/宿舍牌制作/bin/Release/宿舍牌制作.exe"
+  skip_cleanup: true
+  on:
+    tags: true
