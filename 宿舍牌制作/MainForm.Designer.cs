@@ -54,6 +54,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.outputPicture = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -116,11 +117,14 @@
             // 
             // 编辑ToolStripMenuItem
             // 
+            this.编辑ToolStripMenuItem.Checked = true;
+            this.编辑ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.编辑ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.背景ToolStripMenuItem,
             this.输出文件夹ToolStripMenuItem,
             this.脚本ToolStripMenuItem,
-            this.字体ToolStripMenuItem});
+            this.字体ToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
             this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.编辑ToolStripMenuItem.Text = "编辑";
@@ -171,7 +175,7 @@
             this.输出ToolStripMenuItem.Name = "输出ToolStripMenuItem";
             this.输出ToolStripMenuItem.ShortcutKeyDisplayString = "F1";
             this.输出ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.输出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.输出ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.输出ToolStripMenuItem.Text = "输出";
             this.输出ToolStripMenuItem.Click += new System.EventHandler(this.输出ToolStripMenuItem_Click);
             // 
@@ -180,7 +184,7 @@
             this.清除ToolStripMenuItem.Name = "清除ToolStripMenuItem";
             this.清除ToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.清除ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.清除ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.清除ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.清除ToolStripMenuItem.Text = "清除";
             this.清除ToolStripMenuItem.Click += new System.EventHandler(this.清除ToolStripMenuItem_Click);
             // 
@@ -188,7 +192,7 @@
             // 
             this.载入ToolStripMenuItem.Name = "载入ToolStripMenuItem";
             this.载入ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.载入ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.载入ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.载入ToolStripMenuItem.Text = "载入";
             this.载入ToolStripMenuItem.Click += new System.EventHandler(this.载入ToolStripMenuItem_Click);
             // 
@@ -196,7 +200,7 @@
             // 
             this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
             this.关闭ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.关闭ToolStripMenuItem.Text = "关闭";
             this.关闭ToolStripMenuItem.Click += new System.EventHandler(this.关闭ToolStripMenuItem_Click);
             // 
@@ -204,7 +208,7 @@
             // 
             this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
             this.刷新ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.刷新ToolStripMenuItem.Text = "刷新";
             this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
             // 
@@ -267,6 +271,15 @@
             this.fontDialog1.AllowVerticalFonts = false;
             this.fontDialog1.ShowColor = true;
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Checked = true;
+            this.toolStripMenuItem1.CheckOnClick = true;
+            this.toolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "不拉伸";
+            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -323,5 +336,6 @@
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 字体ToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

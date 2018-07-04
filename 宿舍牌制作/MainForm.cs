@@ -105,7 +105,20 @@ namespace 宿舍牌制作
                         throw new Exception("解析脚本时出错：参数错误：" + line);
                     }
                     if (index < members.Count)
-                        g.DrawImage(members[index].photo, x, y, width, height);
+                    {
+                        Rectangle r = new Rectangle(x, y, width, height);
+                        if (toolStripMenuItem1.Checked)//是否不拉伸成员照片
+                        {
+                            g.DrawImage(
+                                members[index].photo,
+                                r,
+                                图片适应(members[index].photo.Size, r.Size),
+                                GraphicsUnit.Pixel
+                                );
+                        }
+                        else
+                            g.DrawImage(members[index].photo, r);
+                    }
                 }
                 else if (words[0] == "TEX")
                 {
@@ -131,9 +144,31 @@ namespace 宿舍牌制作
                         f = new Font(f.FontFamily, size, GraphicsUnit.Pixel);
 
                     if (index < members.Count && j < members[index].data.Length)
+                    {
                         g.DrawString(members[index].data[j], f, new SolidBrush(fontDialog1.Color), x, y);
+                    }
                 }
             }
+        }
+
+        private Rectangle 图片适应(Size src, Size tar)
+        {
+            Rectangle r = new Rectangle();
+            if (src.Width * tar.Height > tar.Width * src.Height)
+            {
+                r.Height = src.Height;
+                r.Width = (int)((double)tar.Width / tar.Height * src.Height);
+                r.Y = 0;
+                r.X = (src.Width - r.Width) / 2;
+            }
+            else
+            {
+                r.Width = src.Width;
+                r.Height = (int)((double)tar.Height / tar.Width * src.Width);
+                r.X = 0;
+                r.Y = (src.Height - r.Height) / 2;
+            }
+            return r;
         }
 
         private void 输出ToolStripMenuItem_Click(object sender, EventArgs e)
