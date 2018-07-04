@@ -16,7 +16,7 @@ namespace 宿舍牌制作
     {
         string drawScript = string.Empty;
         bool isSaved = true;
-        List<Image> members = new List<Image>();
+        List<Member> members = new List<Member>();
         Image background, output;
 
         public MainForm()
@@ -94,7 +94,7 @@ namespace 宿舍牌制作
                     //读取参数
                     try
                     {
-                        index = Convert.ToInt32(args[0]);
+                        index = Convert.ToInt32(args[0]) - 1;
                         x = Convert.ToInt32(args[1]);
                         y = Convert.ToInt32(args[2]);
                         width = Convert.ToInt32(args[3]);
@@ -105,11 +105,33 @@ namespace 宿舍牌制作
                         throw new Exception("解析脚本时出错：参数错误：" + line);
                     }
                     if (index < members.Count)
-                        g.DrawImage(members[index], x, y, width, height);
+                        g.DrawImage(members[index].photo, x, y, width, height);
                 }
                 else if (words[0] == "TEX")
                 {
+                    string[] args = words[1].Split(' ');
+                    if (args.Length < 5)
+                        throw new Exception("解析脚本时出错：参数不足：" + line);
+                    int index, x, y, size, j;
+                    //读取参数
+                    try
+                    {
+                        index = Convert.ToInt32(args[0]) - 1;
+                        x = Convert.ToInt32(args[1]);
+                        y = Convert.ToInt32(args[2]);
+                        size = Convert.ToInt32(args[3]);
+                        j = Convert.ToInt32(args[4]);
+                    }
+                    catch
+                    {
+                        throw new Exception("解析脚本时出错：参数错误：" + line);
+                    }
+                    Font f = fontDialog1.Font;
+                    if (size != 0)
+                        f = new Font(f.FontFamily, size, GraphicsUnit.Pixel);
 
+                    if (index < members.Count && j < members[index].data.Length)
+                        g.DrawString(members[index].data[j], f, new SolidBrush(fontDialog1.Color), x, y);
                 }
             }
         }
@@ -132,17 +154,38 @@ namespace 宿舍牌制作
 
         private void 刷新ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (background == null)
+            {
+                MessageBox.Show("请先选择背景");
+                return;
+            }
             output = new Bitmap(background);
             using (Graphics g = Graphics.FromImage(output))
             {
-                DrawPICandTEX(g);
+                try
+                {
+                    DrawPICandTEX(g);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             pictureBox1.Image = output;
         }
 
         private void 载入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (openPicture.ShowDialog() == DialogResult.Cancel) return;
+            LoadMember(openPicture.FileName);
+        }
 
+        private void LoadMember(string filePath)
+        {
+            Member m;
+            m.photo = Image.FromFile(filePath);
+            m.data = Path.GetFileNameWithoutExtension(filePath).Split('_');
+            members.Add(m);
         }
 
         private void 脚本ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,6 +234,46 @@ namespace 宿舍牌制作
             isSaved = true;
         }
 
+        private void 清除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            members.Clear();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!isSaved)
+            {
+                switch (MessageBox.Show("是否保存？", "提示", MessageBoxButtons.YesNoCancel))
+                {
+                    case DialogResult.Yes:
+                        保存ToolStripMenuItem_Click(sender, e);
+                        break;
+                    case DialogResult.Cancel:
+                        e.Cancel = true;
+                        break;
+                }
+            }
+        }
+
+        private void 字体ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+        }
+
+        private void MainForm_DragDrop(object sender, DragEventArgs e)
+        {
+            LoadMember(((Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString());
+        }
+
+        private void MainForm_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Link;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+
         /// <summary>
         /// 获取PictureBox在Zoom下显示的位置和大小
         /// https://blog.csdn.net/zgke/article/details/4372246
@@ -206,5 +289,10 @@ namespace 宿舍牌制作
             }
             return new Rectangle(0, 0, 0, 0);
         }
+    }
+    struct Member
+    {
+        public Image photo;
+        public string[] data;
     }
 }

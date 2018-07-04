@@ -36,22 +36,24 @@
             this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.背景ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openDSM = new System.Windows.Forms.OpenFileDialog();
-            this.saveDSM = new System.Windows.Forms.SaveFileDialog();
             this.输出文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.脚本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.输出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.载入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDSM = new System.Windows.Forms.OpenFileDialog();
+            this.saveDSM = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openPicture = new System.Windows.Forms.OpenFileDialog();
-            this.脚本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.outputPicture = new System.Windows.Forms.SaveFileDialog();
-            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.字体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -85,7 +87,7 @@
             // 
             this.新建ToolStripMenuItem.Name = "新建ToolStripMenuItem";
             this.新建ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.新建ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.新建ToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.新建ToolStripMenuItem.Text = "新建";
             this.新建ToolStripMenuItem.Click += new System.EventHandler(this.新建ToolStripMenuItem_Click);
             // 
@@ -93,7 +95,7 @@
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
             this.打开ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
@@ -101,14 +103,14 @@
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
             this.保存ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
             // 另存为ToolStripMenuItem
             // 
             this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.另存为ToolStripMenuItem.Text = "另存为";
             this.另存为ToolStripMenuItem.Click += new System.EventHandler(this.另存为ToolStripMenuItem_Click);
             // 
@@ -117,7 +119,8 @@
             this.编辑ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.背景ToolStripMenuItem,
             this.输出文件夹ToolStripMenuItem,
-            this.脚本ToolStripMenuItem});
+            this.脚本ToolStripMenuItem,
+            this.字体ToolStripMenuItem});
             this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
             this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.编辑ToolStripMenuItem.Text = "编辑";
@@ -125,24 +128,24 @@
             // 背景ToolStripMenuItem
             // 
             this.背景ToolStripMenuItem.Name = "背景ToolStripMenuItem";
-            this.背景ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.背景ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.背景ToolStripMenuItem.Text = "背景图片";
             this.背景ToolStripMenuItem.Click += new System.EventHandler(this.背景ToolStripMenuItem_Click);
-            // 
-            // openDSM
-            // 
-            this.openDSM.Filter = "DSM文件|*.dsm";
-            // 
-            // saveDSM
-            // 
-            this.saveDSM.Filter = "DSM文件|*.dsm";
             // 
             // 输出文件夹ToolStripMenuItem
             // 
             this.输出文件夹ToolStripMenuItem.Name = "输出文件夹ToolStripMenuItem";
-            this.输出文件夹ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.输出文件夹ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.输出文件夹ToolStripMenuItem.Text = "输出文件夹";
             this.输出文件夹ToolStripMenuItem.Click += new System.EventHandler(this.输出文件夹ToolStripMenuItem_Click);
+            // 
+            // 脚本ToolStripMenuItem
+            // 
+            this.脚本ToolStripMenuItem.Name = "脚本ToolStripMenuItem";
+            this.脚本ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.脚本ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.脚本ToolStripMenuItem.Text = "脚本";
+            this.脚本ToolStripMenuItem.Click += new System.EventHandler(this.脚本ToolStripMenuItem_Click);
             // 
             // 操作ToolStripMenuItem
             // 
@@ -172,6 +175,7 @@
             this.清除ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
             this.清除ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.清除ToolStripMenuItem.Text = "清除";
+            this.清除ToolStripMenuItem.Click += new System.EventHandler(this.清除ToolStripMenuItem_Click);
             // 
             // 载入ToolStripMenuItem
             // 
@@ -181,6 +185,14 @@
             this.载入ToolStripMenuItem.Text = "载入";
             this.载入ToolStripMenuItem.Click += new System.EventHandler(this.载入ToolStripMenuItem_Click);
             // 
+            // 关闭ToolStripMenuItem
+            // 
+            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
+            this.关闭ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关闭ToolStripMenuItem.Text = "关闭";
+            this.关闭ToolStripMenuItem.Click += new System.EventHandler(this.关闭ToolStripMenuItem_Click);
+            // 
             // 刷新ToolStripMenuItem
             // 
             this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
@@ -188,6 +200,21 @@
             this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.刷新ToolStripMenuItem.Text = "刷新";
             this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.关于ToolStripMenuItem.Text = "关于";
+            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            // 
+            // openDSM
+            // 
+            this.openDSM.Filter = "DSM文件|*.dsm";
+            // 
+            // saveDSM
+            // 
+            this.saveDSM.Filter = "DSM文件|*.dsm";
             // 
             // pictureBox1
             // 
@@ -206,14 +233,6 @@
             // openPicture
             // 
             this.openPicture.Filter = "图片|*.bmp;*.gif;*.jpeg;*.jpg;*.png;*.tiff";
-            // 
-            // 脚本ToolStripMenuItem
-            // 
-            this.脚本ToolStripMenuItem.Name = "脚本ToolStripMenuItem";
-            this.脚本ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.脚本ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.脚本ToolStripMenuItem.Text = "脚本";
-            this.脚本ToolStripMenuItem.Click += new System.EventHandler(this.脚本ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -235,23 +254,21 @@
             // 
             this.outputPicture.Filter = "位图文件|*.bmp|PNG文件|*.png|GIF文件|*.gif|JPEG文件|*.jpeg";
             // 
-            // 关闭ToolStripMenuItem
+            // 字体ToolStripMenuItem
             // 
-            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.关闭ToolStripMenuItem.Text = "关闭";
-            this.关闭ToolStripMenuItem.Click += new System.EventHandler(this.关闭ToolStripMenuItem_Click);
+            this.字体ToolStripMenuItem.Name = "字体ToolStripMenuItem";
+            this.字体ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.字体ToolStripMenuItem.Text = "字体";
+            this.字体ToolStripMenuItem.Click += new System.EventHandler(this.字体ToolStripMenuItem_Click);
             // 
-            // 关于ToolStripMenuItem
+            // fontDialog1
             // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.关于ToolStripMenuItem.Text = "关于";
-            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            this.fontDialog1.AllowVerticalFonts = false;
+            this.fontDialog1.ShowColor = true;
             // 
             // MainForm
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
@@ -264,6 +281,9 @@
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "DSM";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -300,5 +320,7 @@
         private System.Windows.Forms.SaveFileDialog outputPicture;
         private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 字体ToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }

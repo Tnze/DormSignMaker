@@ -33,6 +33,7 @@ namespace 宿舍牌制作
 
         private void ScriptEditer_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Script = "";
             foreach (string s in listBox1.Items)
             {
                 Script += s + "\r\n";
