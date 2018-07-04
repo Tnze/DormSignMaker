@@ -1,6 +1,7 @@
 # DormSignMaker
 用于帮助以快速制作宿舍牌的小工具软件
 [![Build Status](https://www.travis-ci.org/GeniusJunDao/DormSignMaker.svg?branch=master)](https://www.travis-ci.org/GeniusJunDao/DormSignMaker)
+[下载最新版](https://github.com/GeniusJunDao/DormSignMaker/releases/tag/Ord)
 ## 使用说明
 ### 全新开始
 1. 打开该工具。
