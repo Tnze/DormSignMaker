@@ -1,12 +1,12 @@
 language: csharp
 solution: 宿舍牌制作.sln
 before_deploy:
-      # Set up git user name and tag this commit
-      - git config --local user.name "GeniusJunDao"
-      - git config --local user.email "cjd001113@outlook.com"
-      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+	# Set up git user name and tag this commit
+	- git config --local user.name "GeniusJunDao"
+	- git config --local user.email "cjd001113@outlook.com"
+	- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
- provider: releases
-  api_key: "${GITHUBOAUTHTOKEN}"
-  file: "/home/travis/build/GeniusJunDao/DormSignMaker/宿舍牌制作/bin/Release/宿舍牌制作.exe"
-  skip_cleanup: true
+	provider: releases
+	api_key: "${GITHUBOAUTHTOKEN}"
+	file: "/home/travis/build/GeniusJunDao/DormSignMaker/宿舍牌制作/bin/Release/宿舍牌制作.exe"
+	skip_cleanup: true
