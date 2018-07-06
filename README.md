@@ -1,7 +1,8 @@
 # DormSignMaker
-用于帮助以快速制作宿舍牌的小工具软件
+用于快速制作宿舍牌的小工具   
+点击[这里](https://github.com/GeniusJunDao/DormSignMaker/releases)下载最新版  
+
 [![Build Status](https://www.travis-ci.org/GeniusJunDao/DormSignMaker.svg?branch=master)](https://www.travis-ci.org/GeniusJunDao/DormSignMaker)
-[下载最新版](https://github.com/GeniusJunDao/DormSignMaker/releases)
 ## 使用说明
 ### 全新开始
 1. 打开该工具。
@@ -25,7 +26,7 @@
 1. 点击*操作-清除*清除载入的所有照片。
 1. 重复4到6步，直到您完成了您所有的宿舍牌作品。
 
-> 您也可以通过从Windows资源管理器拖拽图片文件的方式来完成*载入*操作
+> 您也可以通过从Windows资源管理器拖拽图片文件的方式来完成*载入*操作  
 
 ## 脚本编写说明
 - ### 绘制图片
@@ -53,4 +54,6 @@
 ------------
 ## 其他
 这个小工具的制作，我只是完成了基本的功能。对于许多细节，并未细致地思考和处理。所以可能有一些用户的非法操作并不会撞上“空气墙”并给出提示。所以请您正常使用的时候严格按照上面的
-**使用说明**操作。当然，如果您非常的皮，并且找到了软件中不合理的地方，也欢迎你提[Issues](https://github.com/GeniusJunDao/DormSignMaker/issues)给我~
+**使用说明**操作。当然，如果您非常的皮，并且找到了软件中不合理的地方，也欢迎你提[Issues](https://github.com/GeniusJunDao/DormSignMaker/issues)给我~  
+再如果您有任何问题或者宝贵的建议，也可以
+*点击[加群](https://jq.qq.com/?_wv=1027&k=5FAHpSZ)*交流
